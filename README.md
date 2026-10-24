@@ -1,6 +1,8 @@
 # Conversational Clustering
 Implementation repo for conversational clustering.
 
+Paper: [Rethinking Clustering as a Conversational Supervision Problem](https://aclanthology.org/2026.emnlp-main.1924/) (EMNLP 2026).
+
 ## Setup 
 ### Environment
 Project dependencies are managed by [uv](https://github.com/astral-sh/uv).
