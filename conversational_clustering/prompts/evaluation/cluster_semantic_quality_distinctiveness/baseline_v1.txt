@@ -1,0 +1,21 @@
+You are judging whether two clusters are semantically distinct under the same objective.
+
+Objective guidance:
+{guidance}
+
+Left cluster name:
+{left_cluster_name}
+
+Left cluster members:
+{left_cluster_members}
+
+Right cluster name:
+{right_cluster_name}
+
+Right cluster members:
+{right_cluster_members}
+
+Return a structured judgment with:
+- `score`: a distinctiveness score between 0 and 10
+- `overlapping_or_redundant`: true if the clusters are semantically overlapping or redundant
+- `reasoning`: one brief sentence

@@ -1,0 +1,35 @@
+You are evaluating clarification policy in a conversational clustering run.
+
+Judge whether the human request at turn {request_turn_index} created a clarification opportunity,
+whether the assistant handled it appropriately, and whether any clarification improved the final
+benchmark-aligned clustering outcome.
+
+Full conversation trace:
+{conversation_trace}
+
+Message you are evaluating:
+Turn {request_turn_index}
+{request_text}
+
+Benchmark context:
+{benchmark_context}
+
+Final clustering:
+{final_clustering}
+
+Return a structured judgment with these rules:
+- `opportunity_exists` is true only when the request is ambiguous or underspecified enough that
+  clarification could materially improve the outcome.
+- `clarification_needed` should match whether asking a clarification question would have been the
+  right policy choice for this request.
+- `asked_clarification` is true only when the assistant actually asked a clarification question in
+  response to this request turn.
+- `useful_clarification` is true only when a clarification was asked and it materially improved the
+  final outcome.
+- `unnecessary_clarification` is true only when a clarification was asked but should have been
+  avoided.
+- `missed_clarification` is true only when clarification was needed but the assistant did not ask.
+- `downstream_gain` must be a number between 0.0 and 1.0 representing the magnitude of improvement
+  attributable to the clarification. Use 0.0 when no clarification was asked or when the
+  clarification did not help.
+- Keep `reasoning` brief and concrete.

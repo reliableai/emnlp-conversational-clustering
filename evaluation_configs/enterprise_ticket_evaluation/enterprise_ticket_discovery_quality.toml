@@ -1,0 +1,10 @@
+input_dir = "data/batch_run_results/enterprise_ticket_run"
+evaluators = ["discovery_semantic_quality"]
+report_path = "data/evaluation_results/enterprise_ticket_discovery_quality/evaluation_report.json"
+
+[evaluator_params.discovery_semantic_quality]
+theme_match_prompt_id = "baseline_v1"
+duplicate_prompt_id = "baseline_v1"
+
+[evaluator_params.discovery_semantic_quality.model_config]
+model = "openai/gpt-5.4-mini"

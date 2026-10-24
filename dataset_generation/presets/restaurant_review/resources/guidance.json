@@ -1,0 +1,56 @@
+{
+  "PRIMARY_FOCUS_GUIDANCE": {
+    "food_quality": "make the food itself the main reason for the review",
+    "service": "make the staff interaction or service flow the main point",
+    "ambience": "make the room, comfort, or mood the main point",
+    "value": "make the price-to-experience tradeoff the main point",
+    "speed": "make wait time or turnaround the main point",
+    "cleanliness": "make cleanliness or upkeep the main point"
+  },
+  "SENTIMENT_GUIDANCE": {
+    "very_negative": "sound clearly disappointed overall",
+    "negative": "sound unfavorable but not theatrical",
+    "mixed": "show both upside and downside",
+    "positive": "sound clearly favorable with a grounded detail",
+    "very_positive": "sound strongly enthusiastic and specific"
+  },
+  "VISIT_MODE_GUIDANCE": {
+    "dine_in": "sound like the person was physically in the restaurant",
+    "takeout": "sound like the review is about a takeout order",
+    "delivery": "sound like the review is about delivery arrival and condition",
+    "drive_through": "sound like the review is about a drive-through experience"
+  },
+  "OPENING_STYLE_GUIDANCE": {
+    "verdict_first": "open with a quick verdict or first impression",
+    "detail_first": "open with the concrete thing that stood out",
+    "context_first": "open with a little visit context before the judgment"
+  },
+  "LENGTH_STYLE_GUIDANCE": {
+    "short": "keep it compact and direct",
+    "medium": "use a normal short-review length",
+    "detailed": "include a bit more context and consequence"
+  },
+  "DETAIL_STYLE_GUIDANCE": {
+    "single_observation": "center the review on one strong observation",
+    "specific_example": "include one concrete example or symptom",
+    "balanced_note": "briefly note both the good and bad parts"
+  },
+  "CLOSING_STYLE_GUIDANCE": {
+    "none": "the review can end without a recommendation line",
+    "recommend": "end with a light recommendation or return intent",
+    "conditional": "end with a condition or caveat",
+    "skip_returning": "end with a clear sign that the reviewer would not come back"
+  },
+  "REPETITION_AVOIDANCE_GUIDANCE": [
+    "Avoid repeating the same opening verdict across rows.",
+    "Do not reuse the same first four-word sequence.",
+    "Vary sentence rhythm between punchy and slightly descriptive.",
+    "When two rows share similar ratings, still vary the concrete detail."
+  ],
+  "BANNED_TEMPLATE_SCAFFOLDS": [
+    "great place",
+    "good food",
+    "bad service",
+    "would not recommend"
+  ]
+}

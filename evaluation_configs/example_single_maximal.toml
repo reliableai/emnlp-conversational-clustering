@@ -1,0 +1,152 @@
+input_dir = "data/batch_run_results/example_maximal"
+evaluators = [
+  "basic_metrics",
+  "cluster_semantic_quality",
+  "clarification_policy",
+  "clustering_pov_semantic_quality",
+  "controllability",
+  "conversation_trace_metrics",
+  "discovery_semantic_quality",
+  # "null_theme_abstention",  # Requires dataset-specific unsupported_topics.
+  "efficiency_utility",
+  "human_effort_metrics",
+  "inferred_theme_efficiency_utility",
+  "label_groundtruth_consistency",
+  "semantic_consistency",
+  "topic_conditioned_quality",
+]
+report_path = "data/evaluation_results/example_single_maximal/evaluation_report.json"
+resume = true
+
+[evaluator_params.basic_metrics]
+
+[evaluator_params.cluster_semantic_quality]
+coherence_prompt_id = "baseline_v1"
+distinctiveness_prompt_id = "baseline_v1"
+
+[evaluator_params.cluster_semantic_quality.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[evaluator_params.clarification_policy]
+prompt_id = "baseline_v1"
+
+[evaluator_params.clarification_policy.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[evaluator_params.clustering_pov_semantic_quality]
+theme_match_prompt_id = "baseline_v1"
+duplicate_prompt_id = "baseline_v1"
+
+[evaluator_params.clustering_pov_semantic_quality.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[evaluator_params.controllability]
+alpha = 0.8
+beta = 0.1
+
+[evaluator_params.conversation_trace_metrics]
+
+[evaluator_params.discovery_semantic_quality]
+theme_match_prompt_id = "baseline_v1"
+duplicate_prompt_id = "baseline_v1"
+
+[evaluator_params.discovery_semantic_quality.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+# [evaluator_params.null_theme_abstention]
+# match_judge_prompt_id = "baseline_v1"
+# trace_judge_prompt_id = "baseline_v1"
+# unsupported_topics = [
+#   { topic_id = "astrology", label = "Astrology", guidance = "Group items by zodiac meaning." },
+# ]
+#
+# [evaluator_params.null_theme_abstention.model_config]
+# model = "openai/gpt-5.4-mini"
+# base_url = "https://openrouter.ai/api/v1"
+# provider_order = []
+# allow_fallbacks = true
+# api_key_env = "OPENROUTER_API_KEY"
+# temperature = 0.0
+
+[evaluator_params.efficiency_utility]
+granularity = "normal"
+threshold = 0.8
+include_semantic_utility = true
+coherence_prompt_id = "baseline_v1"
+distinctiveness_prompt_id = "baseline_v1"
+semantic_snapshot_mode = "all"
+
+[evaluator_params.efficiency_utility.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[evaluator_params.human_effort_metrics]
+
+[evaluator_params.inferred_theme_efficiency_utility]
+granularity = "normal"
+threshold = 0.8
+include_semantic_utility = true
+theme_match_prompt_id = "baseline_v1"
+coherence_prompt_id = "baseline_v1"
+distinctiveness_prompt_id = "baseline_v1"
+semantic_snapshot_mode = "all"
+
+[evaluator_params.inferred_theme_efficiency_utility.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[evaluator_params.label_groundtruth_consistency]
+ground_truth_label_column = "label"
+
+[evaluator_params.semantic_consistency]
+num_samples = 5
+inference_prompt_id = "baseline_v1"
+judge_prompt_id = "baseline_v1"
+
+[evaluator_params.semantic_consistency.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[evaluator_params.topic_conditioned_quality]
+granularity = "normal"
+theme_match_prompt_id = "baseline_v1"
+
+[evaluator_params.topic_conditioned_quality.model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0

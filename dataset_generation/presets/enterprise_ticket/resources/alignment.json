@@ -1,0 +1,1802 @@
+{
+  "ACCESS_RELATED_ISSUE_TYPES": [
+    "access_request",
+    "authentication_issue"
+  ],
+  "DISPLAY_TOKENS": {
+    "ac": "air conditioning",
+    "hr": "HR",
+    "it": "IT",
+    "mfa": "MFA",
+    "msa": "MSA",
+    "nda": "NDA",
+    "okta": "Okta",
+    "po": "PO",
+    "vpn": "VPN",
+    "av": "AV",
+    "bi": "BI",
+    "ci": "CI",
+    "crm": "CRM",
+    "w2": "W-2"
+  },
+  "GENERIC_LABEL_TOKENS": [
+    "issue",
+    "problem",
+    "question",
+    "request",
+    "requester",
+    "review",
+    "service",
+    "support"
+  ],
+  "ISSUE_TYPE_HINTS": {
+    "access_request": [
+      "access",
+      "permission",
+      "grant",
+      "enable",
+      "badge"
+    ],
+    "authentication_issue": [
+      "login",
+      "sign in",
+      "password",
+      "mfa",
+      "account locked"
+    ],
+    "finance_transaction_issue": [
+      "invoice",
+      "payment",
+      "reimbursement",
+      "receipt",
+      "expense"
+    ],
+    "legal_compliance_request": [
+      "contract",
+      "privacy",
+      "legal",
+      "compliance",
+      "clause"
+    ],
+    "onboarding_offboarding": [
+      "new hire",
+      "onboarding",
+      "offboarding",
+      "start date",
+      "setup"
+    ],
+    "people_record_request": [
+      "employee",
+      "benefits",
+      "profile",
+      "record",
+      "update"
+    ],
+    "policy_question": [
+      "policy",
+      "guidance",
+      "question",
+      "clarify",
+      "process"
+    ],
+    "security_incident": [
+      "phishing",
+      "malware",
+      "suspicious",
+      "exposure",
+      "compromise"
+    ],
+    "service_issue": [
+      "software",
+      "laptop",
+      "install",
+      "application",
+      "hardware"
+    ],
+    "vendor_purchase_request": [
+      "vendor",
+      "purchase",
+      "supplier",
+      "quote",
+      "contract"
+    ],
+    "workspace_support": [
+      "workspace",
+      "desk",
+      "office",
+      "room",
+      "maintenance"
+    ],
+    "customer_support_operations_issue": [
+      "case operations",
+      "handoff queue",
+      "escalation path",
+      "status page",
+      "email template"
+    ],
+    "customer_support_platform_issue": [
+      "support platform",
+      "macro",
+      "trigger",
+      "help center",
+      "zendesk"
+    ],
+    "data_platform_issue": [
+      "data pipeline",
+      "dataset",
+      "report",
+      "backfill",
+      "warehouse"
+    ],
+    "developer_tooling_issue": [
+      "developer tooling",
+      "build pipeline",
+      "package registry",
+      "build runner",
+      "environment config"
+    ],
+    "legal_review_issue": [
+      "contract",
+      "privacy",
+      "legal review",
+      "clause",
+      "agreement"
+    ],
+    "marketing_operations_issue": [
+      "campaign operations",
+      "webinar",
+      "asset approval",
+      "swag vendor",
+      "events workflow"
+    ],
+    "marketing_platform_issue": [
+      "marketing platform",
+      "form routing",
+      "audience sync",
+      "landing page",
+      "marketo"
+    ],
+    "metrics_governance_issue": [
+      "metric definition",
+      "tracking gap",
+      "dashboard discrepancy",
+      "source of truth",
+      "metrics governance"
+    ],
+    "onboarding_process_issue": [
+      "new hire onboarding",
+      "orientation",
+      "setup step",
+      "start date",
+      "onboarding"
+    ],
+    "payroll_operations_issue": [
+      "payroll",
+      "timesheet",
+      "tax document",
+      "pay stub",
+      "bonus payment"
+    ],
+    "people_administration_issue": [
+      "employee record",
+      "personal information",
+      "manager change",
+      "title change",
+      "benefits coverage"
+    ],
+    "procurement_workflow_issue": [
+      "vendor setup",
+      "purchase request",
+      "supplier",
+      "quote",
+      "procurement"
+    ],
+    "regional_operations_issue": [
+      "site operations",
+      "regional compliance",
+      "local services",
+      "regional move",
+      "mailroom"
+    ],
+    "release_operations_issue": [
+      "release window",
+      "deployment freeze",
+      "rollback",
+      "feature flag",
+      "release operations"
+    ],
+    "sales_operations_issue": [
+      "quote approval",
+      "discount exception",
+      "territory update",
+      "book transfer",
+      "account ownership"
+    ],
+    "sales_platform_issue": [
+      "crm",
+      "lead routing",
+      "pipeline visibility",
+      "quote builder",
+      "salesforce"
+    ],
+    "travel_operations_issue": [
+      "travel",
+      "trip",
+      "expense",
+      "receipt",
+      "corporate card"
+    ],
+    "workplace_experience_issue": [
+      "catering",
+      "visitor",
+      "onsite event",
+      "all hands",
+      "pantry"
+    ],
+    "workplace_support_issue": [
+      "workspace",
+      "desk",
+      "office",
+      "room",
+      "maintenance"
+    ]
+  },
+  "MATCH_STOPWORDS": [
+    "a",
+    "an",
+    "and",
+    "for",
+    "from",
+    "in",
+    "just",
+    "my",
+    "of",
+    "on",
+    "the",
+    "to",
+    "with"
+  ],
+  "SUB_INTENT_HINTS": {
+    "ac_issue": [
+      "ac",
+      "air conditioning",
+      "too hot",
+      "too cold",
+      "temperature issue"
+    ],
+    "account_locked": [
+      "account locked",
+      "locked account",
+      "locked out",
+      "cannot sign in"
+    ],
+    "admin_access": [
+      "admin",
+      "admin access",
+      "administrator access",
+      "elevated permissions",
+      "elevated rights",
+      "privileged access"
+    ],
+    "application_crash": [
+      "application crash",
+      "app crash",
+      "crash",
+      "keeps crashing",
+      "shutting down",
+      "closes unexpectedly",
+      "quits unexpectedly",
+      "freezes and closes",
+      "stops responding"
+    ],
+    "badge_not_working": [
+      "badge not working",
+      "badge stopped working",
+      "access card",
+      "cannot badge in",
+      "door will not unlock"
+    ],
+    "cleaning_issue": [
+      "cleaning",
+      "not cleaned",
+      "dirty",
+      "spill",
+      "trash",
+      "janitorial"
+    ],
+    "credential_compromise": [
+      "credential compromise",
+      "account compromised",
+      "password changed",
+      "password updated",
+      "got kicked out",
+      "someone got into my login",
+      "unauthorized access",
+      "security alert",
+      "unexpected password reset"
+    ],
+    "data_access_request": [
+      "data access",
+      "access my data",
+      "copy of my data",
+      "personal information request",
+      "privacy request",
+      "export my data"
+    ],
+    "data_deletion_request": [
+      "data deletion",
+      "delete data",
+      "remove data",
+      "erase data",
+      "delete personal information",
+      "remove personal information",
+      "privacy deletion"
+    ],
+    "data_exposure_concern": [
+      "data exposure",
+      "information exposed",
+      "shared publicly",
+      "visible to the wrong people",
+      "sensitive data"
+    ],
+    "desk_move": [
+      "desk move",
+      "seat move",
+      "move my desk",
+      "workspace move",
+      "new desk"
+    ],
+    "equipment_purchase": [
+      "equipment purchase",
+      "hardware order",
+      "device order",
+      "new hardware",
+      "new devices",
+      "testing tablets"
+    ],
+    "ergonomic_equipment": [
+      "ergonomic",
+      "ergonomic equipment",
+      "chair support",
+      "monitor arm",
+      "keyboard tray",
+      "wrist support"
+    ],
+    "installation_failure": [
+      "installation failed",
+      "install failed",
+      "cannot install",
+      "setup failed",
+      "install error"
+    ],
+    "legal_process_question": [
+      "legal process",
+      "legal procedure",
+      "required legal steps",
+      "next legal step"
+    ],
+    "license_missing": [
+      "license missing",
+      "missing license",
+      "no license",
+      "seat not assigned",
+      "subscription missing"
+    ],
+    "lighting_problem": [
+      "lighting",
+      "lights",
+      "light is out",
+      "lights are out",
+      "flickering",
+      "dark",
+      "dim",
+      "dark area",
+      "overhead light",
+      "ceiling light",
+      "bulb"
+    ],
+    "malware_alert": [
+      "malware alert",
+      "virus alert",
+      "infected",
+      "malware",
+      "security alert"
+    ],
+    "meeting_room_setup": [
+      "meeting room",
+      "conference room",
+      "room setup",
+      "set up the room",
+      "call setup"
+    ],
+    "mfa_problem": [
+      "mfa",
+      "2fa",
+      "two factor",
+      "verification code",
+      "security code",
+      "one time code",
+      "passcode",
+      "push notification",
+      "approve sign in",
+      "authenticator app",
+      "authenticator",
+      "sign in prompt",
+      "login loop"
+    ],
+    "msa_review": [
+      "msa",
+      "master service agreement",
+      "master agreement",
+      "services agreement",
+      "service agreement"
+    ],
+    "nda_review": [
+      "nda",
+      "non disclosure agreement",
+      "confidentiality agreement"
+    ],
+    "new_badge_request": [
+      "new badge",
+      "replacement badge",
+      "badge request",
+      "access card"
+    ],
+    "password_reset": [
+      "password reset",
+      "reset my password",
+      "forgot password",
+      "change my password"
+    ],
+    "phishing_report": [
+      "phishing",
+      "phishing email",
+      "suspicious email",
+      "fake email",
+      "clicked a suspicious link"
+    ],
+    "policy_exception_question": [
+      "policy exception",
+      "exception request",
+      "special approval",
+      "exception to policy"
+    ],
+    "policy_violation": [
+      "policy violation",
+      "against policy",
+      "not allowed by policy",
+      "compliance issue",
+      "rule violation"
+    ],
+    "privacy_clause_question": [
+      "privacy clause",
+      "privacy language",
+      "privacy wording",
+      "data protection clause"
+    ],
+    "privileged_access_review": [
+      "privileged access",
+      "elevated access",
+      "admin review",
+      "access audit"
+    ],
+    "quote_review": [
+      "quote",
+      "pricing",
+      "estimate",
+      "quoted price"
+    ],
+    "retention_policy_question": [
+      "retention policy",
+      "how long to keep",
+      "data retention",
+      "record retention"
+    ],
+    "role_audit": [
+      "role review",
+      "role audit",
+      "access audit",
+      "entitlement review"
+    ],
+    "service_contract_request": [
+      "service contract",
+      "services agreement",
+      "service agreement",
+      "vendor contract"
+    ],
+    "shared_drive_access": [
+      "shared drive",
+      "shared folder",
+      "team drive",
+      "folder access",
+      "drive access"
+    ],
+    "software_purchase": [
+      "software purchase",
+      "buy software",
+      "software order",
+      "new software license"
+    ],
+    "subscription_renewal": [
+      "subscription renewal",
+      "renewal",
+      "renew the subscription",
+      "keep the service active"
+    ],
+    "suspicious_login": [
+      "suspicious login",
+      "unrecognized sign in",
+      "unexpected login",
+      "login alert",
+      "new sign in alert",
+      "someone signed in"
+    ],
+    "temporary_access": [
+      "temporary",
+      "temporary access",
+      "temporary admin",
+      "elevated permissions",
+      "elevated rights",
+      "privileged access",
+      "just for today",
+      "for a few hours"
+    ],
+    "terminated_user_access_check": [
+      "terminated user",
+      "former employee",
+      "offboarded user",
+      "access removal"
+    ],
+    "urgent_purchase_exception": [
+      "urgent purchase",
+      "rush order",
+      "exception purchase",
+      "need this approved today"
+    ],
+    "vendor_contract_review": [
+      "vendor contract",
+      "supplier contract",
+      "agreement review",
+      "contract review"
+    ],
+    "visitor_access": [
+      "visitor access",
+      "guest access",
+      "visitor badge",
+      "guest badge",
+      "external visitor"
+    ],
+    "vpn_access": [
+      "vpn",
+      "remote access",
+      "connect from home",
+      "remote network login",
+      "remote connection",
+      "work remotely",
+      "connect remotely",
+      "connection will not establish",
+      "cannot connect remotely"
+    ],
+    "account_coverage_gap": [
+      "account coverage gap",
+      "account coverage",
+      "coverage gap",
+      "account",
+      "coverage",
+      "gap"
+    ],
+    "account_ownership_correction": [
+      "account ownership correction",
+      "account ownership",
+      "ownership correction",
+      "account",
+      "ownership",
+      "correction"
+    ],
+    "after_hours_access_setup": [
+      "after hours access setup",
+      "after hours access",
+      "hours access setup",
+      "after hours",
+      "hours access",
+      "access setup"
+    ],
+    "agent_provisioning_request": [
+      "agent provisioning request",
+      "agent provisioning",
+      "agent",
+      "provisioning"
+    ],
+    "all_hands_room_reset": [
+      "all hands room reset",
+      "all hands room",
+      "hands room reset",
+      "all hands",
+      "hands room",
+      "room reset"
+    ],
+    "approval_missing": [
+      "approval missing",
+      "approval",
+      "missing"
+    ],
+    "asset_approval_delay": [
+      "asset approval delay",
+      "asset approval",
+      "approval delay",
+      "asset",
+      "approval",
+      "delay"
+    ],
+    "audience_sync_problem": [
+      "audience sync problem",
+      "audience sync",
+      "audience",
+      "sync"
+    ],
+    "av_setup_issue": [
+      "AV setup issue",
+      "AV setup",
+      "AV",
+      "setup"
+    ],
+    "bank_detail_update": [
+      "bank detail update",
+      "bank detail",
+      "detail update",
+      "bank",
+      "detail",
+      "update"
+    ],
+    "bi_group_membership_change": [
+      "BI group membership change",
+      "BI group membership",
+      "group membership change",
+      "BI group",
+      "group membership",
+      "membership change"
+    ],
+    "bonus_payment_followup": [
+      "bonus payment followup",
+      "bonus payment",
+      "payment followup",
+      "bonus",
+      "payment",
+      "followup"
+    ],
+    "book_transfer_request": [
+      "book transfer request",
+      "book transfer",
+      "book",
+      "transfer"
+    ],
+    "budget_code_question": [
+      "budget code question",
+      "budget code",
+      "budget",
+      "code"
+    ],
+    "build_platform_access": [
+      "build platform access",
+      "build platform",
+      "platform access",
+      "build",
+      "platform",
+      "access"
+    ],
+    "build_runner_capacity_issue": [
+      "build runner capacity issue",
+      "build runner capacity",
+      "build runner",
+      "runner capacity",
+      "build",
+      "runner"
+    ],
+    "campaign_launch_change": [
+      "campaign launch change",
+      "campaign launch",
+      "launch change",
+      "campaign",
+      "launch",
+      "change"
+    ],
+    "campaign_schedule_update": [
+      "campaign schedule update",
+      "campaign schedule",
+      "schedule update",
+      "campaign",
+      "schedule",
+      "update"
+    ],
+    "case_merge_split_problem": [
+      "case merge split problem",
+      "case merge split",
+      "case merge",
+      "merge split",
+      "case",
+      "merge"
+    ],
+    "case_reassignment_request": [
+      "case reassignment request",
+      "case reassignment",
+      "case",
+      "reassignment"
+    ],
+    "catering_setup_issue": [
+      "catering setup issue",
+      "catering setup",
+      "catering",
+      "setup"
+    ],
+    "ci_pipeline_issue": [
+      "CI pipeline issue",
+      "CI pipeline",
+      "CI",
+      "pipeline"
+    ],
+    "cloud_role_access": [
+      "cloud role access",
+      "cloud role",
+      "role access",
+      "cloud",
+      "role",
+      "access"
+    ],
+    "commission_payment_followup": [
+      "commission payment followup",
+      "commission payment",
+      "payment followup",
+      "commission",
+      "payment",
+      "followup"
+    ],
+    "corporate_card_travel_issue": [
+      "corporate card travel issue",
+      "corporate card travel",
+      "corporate card",
+      "card travel",
+      "corporate",
+      "card"
+    ],
+    "country_process_question": [
+      "country process question",
+      "country process",
+      "country",
+      "process"
+    ],
+    "courier_delivery_issue": [
+      "courier delivery issue",
+      "courier delivery",
+      "courier",
+      "delivery"
+    ],
+    "coverage_question": [
+      "coverage question",
+      "coverage"
+    ],
+    "crm_access_change": [
+      "CRM access change",
+      "CRM access",
+      "access change",
+      "CRM",
+      "access",
+      "change"
+    ],
+    "dashboard_access_request": [
+      "dashboard access request",
+      "dashboard access",
+      "dashboard",
+      "access"
+    ],
+    "dashboard_discrepancy_report": [
+      "dashboard discrepancy report",
+      "dashboard discrepancy",
+      "discrepancy report",
+      "dashboard",
+      "discrepancy",
+      "report"
+    ],
+    "dataset_backfill_request": [
+      "dataset backfill request",
+      "dataset backfill",
+      "dataset",
+      "backfill"
+    ],
+    "deduction_mismatch": [
+      "deduction mismatch",
+      "deduction",
+      "mismatch"
+    ],
+    "dependent_addition": [
+      "dependent addition",
+      "dependent",
+      "addition"
+    ],
+    "deployment_freeze_exception": [
+      "deployment freeze exception",
+      "deployment freeze",
+      "freeze exception",
+      "deployment",
+      "freeze",
+      "exception"
+    ],
+    "discount_exception_request": [
+      "discount exception request",
+      "discount exception",
+      "discount",
+      "exception"
+    ],
+    "duplicate_claim": [
+      "duplicate claim",
+      "duplicate",
+      "claim"
+    ],
+    "duplicate_invoice": [
+      "duplicate invoice",
+      "duplicate",
+      "invoice"
+    ],
+    "email_template_update": [
+      "email template update",
+      "email template",
+      "template update",
+      "email",
+      "template",
+      "update"
+    ],
+    "emergency_travel_change": [
+      "emergency travel change",
+      "emergency travel",
+      "travel change",
+      "emergency",
+      "travel",
+      "change"
+    ],
+    "employment_policy_question": [
+      "employment policy question",
+      "employment policy",
+      "employment",
+      "policy"
+    ],
+    "enrollment_problem": [
+      "enrollment problem",
+      "enrollment"
+    ],
+    "environment_config_problem": [
+      "environment config problem",
+      "environment config",
+      "environment",
+      "config"
+    ],
+    "escalation_path_change": [
+      "escalation path change",
+      "escalation path",
+      "path change",
+      "escalation",
+      "path",
+      "change"
+    ],
+    "event_schedule_change": [
+      "event schedule change",
+      "event schedule",
+      "schedule change",
+      "event",
+      "schedule",
+      "change"
+    ],
+    "feature_flag_access": [
+      "feature flag access",
+      "feature flag",
+      "flag access",
+      "feature",
+      "flag",
+      "access"
+    ],
+    "form_routing_issue": [
+      "form routing issue",
+      "form routing",
+      "form",
+      "routing"
+    ],
+    "handoff_queue_issue": [
+      "handoff queue issue",
+      "handoff queue",
+      "handoff",
+      "queue"
+    ],
+    "hardware_replacement": [
+      "hardware replacement",
+      "hardware",
+      "replacement"
+    ],
+    "help_center_publish_issue": [
+      "help center publish issue",
+      "help center publish",
+      "help center",
+      "center publish",
+      "help",
+      "center"
+    ],
+    "invoice_mismatch": [
+      "invoice mismatch",
+      "invoice",
+      "mismatch"
+    ],
+    "landing_page_publish_issue": [
+      "landing page publish issue",
+      "landing page publish",
+      "landing page",
+      "page publish",
+      "landing",
+      "page"
+    ],
+    "laptop_setup": [
+      "laptop setup",
+      "laptop",
+      "setup"
+    ],
+    "lead_routing_issue": [
+      "lead routing issue",
+      "lead routing",
+      "lead",
+      "routing"
+    ],
+    "leave_policy_question": [
+      "leave policy question",
+      "leave policy",
+      "leave",
+      "policy"
+    ],
+    "local_notice_update": [
+      "local notice update",
+      "local notice",
+      "notice update",
+      "local",
+      "notice",
+      "update"
+    ],
+    "local_site_access_issue": [
+      "local site access issue",
+      "local site access",
+      "local site",
+      "site access",
+      "local",
+      "site"
+    ],
+    "local_vendor_followup": [
+      "local vendor followup",
+      "local vendor",
+      "vendor followup",
+      "local",
+      "vendor",
+      "followup"
+    ],
+    "macro_or_view_missing": [
+      "macro or view missing",
+      "macro or view",
+      "or view missing",
+      "macro or",
+      "or view",
+      "view missing"
+    ],
+    "mailroom_request": [
+      "mailroom request",
+      "mailroom"
+    ],
+    "manager_change": [
+      "manager change",
+      "manager",
+      "change"
+    ],
+    "marketing_permission_change": [
+      "marketing permission change",
+      "marketing permission",
+      "permission change",
+      "marketing",
+      "permission",
+      "change"
+    ],
+    "marketing_tool_access": [
+      "marketing tool access",
+      "marketing tool",
+      "tool access",
+      "marketing",
+      "tool",
+      "access"
+    ],
+    "metric_definition_question": [
+      "metric definition question",
+      "metric definition",
+      "metric",
+      "definition"
+    ],
+    "missing_onboarding_step": [
+      "missing onboarding step",
+      "missing onboarding",
+      "onboarding step",
+      "missing",
+      "onboarding",
+      "step"
+    ],
+    "missing_pay": [
+      "missing pay",
+      "missing",
+      "pay"
+    ],
+    "missing_reimbursement": [
+      "missing reimbursement",
+      "missing",
+      "reimbursement"
+    ],
+    "missing_tax_form": [
+      "missing tax form",
+      "missing tax",
+      "tax form",
+      "missing",
+      "tax",
+      "form"
+    ],
+    "new_hire_setup": [
+      "new hire setup",
+      "new hire",
+      "hire setup",
+      "new",
+      "hire",
+      "setup"
+    ],
+    "new_supplier_request": [
+      "new supplier request",
+      "new supplier",
+      "new",
+      "supplier"
+    ],
+    "new_vendor_creation": [
+      "new vendor creation",
+      "new vendor",
+      "vendor creation",
+      "new",
+      "vendor",
+      "creation"
+    ],
+    "nurture_enrollment_problem": [
+      "nurture enrollment problem",
+      "nurture enrollment",
+      "nurture",
+      "enrollment"
+    ],
+    "office_supply_restock": [
+      "office supply restock",
+      "office supply",
+      "supply restock",
+      "office",
+      "supply",
+      "restock"
+    ],
+    "onsite_event_support": [
+      "onsite event support",
+      "onsite event",
+      "onsite",
+      "event"
+    ],
+    "orientation_question": [
+      "orientation question",
+      "orientation"
+    ],
+    "outbound_notification_failure": [
+      "outbound notification failure",
+      "outbound notification",
+      "notification failure",
+      "outbound",
+      "notification",
+      "failure"
+    ],
+    "overtime_calculation_issue": [
+      "overtime calculation issue",
+      "overtime calculation",
+      "overtime",
+      "calculation"
+    ],
+    "package_registry_problem": [
+      "package registry problem",
+      "package registry",
+      "package",
+      "registry"
+    ],
+    "pantry_service_issue": [
+      "pantry service issue",
+      "pantry"
+    ],
+    "parking_access_request": [
+      "parking access request",
+      "parking access",
+      "parking",
+      "access"
+    ],
+    "pay_stub_request": [
+      "pay stub request",
+      "pay stub",
+      "pay",
+      "stub"
+    ],
+    "payment_delay": [
+      "payment delay",
+      "payment",
+      "delay"
+    ],
+    "per_diem_exception_question": [
+      "per diem exception question",
+      "per diem exception",
+      "per diem",
+      "diem exception",
+      "per",
+      "diem"
+    ],
+    "personal_info_correction": [
+      "personal info correction",
+      "personal info",
+      "info correction",
+      "personal",
+      "info",
+      "correction"
+    ],
+    "pipeline_failure_report": [
+      "pipeline failure report",
+      "pipeline failure",
+      "failure report",
+      "pipeline",
+      "failure",
+      "report"
+    ],
+    "pipeline_visibility_issue": [
+      "pipeline visibility issue",
+      "pipeline visibility",
+      "pipeline",
+      "visibility"
+    ],
+    "po_creation": [
+      "PO creation",
+      "PO",
+      "creation"
+    ],
+    "policy_translation_update": [
+      "policy translation update",
+      "policy translation",
+      "translation update",
+      "policy",
+      "translation",
+      "update"
+    ],
+    "queue_access_change": [
+      "queue access change",
+      "queue access",
+      "access change",
+      "queue",
+      "access",
+      "change"
+    ],
+    "quote_approval_followup": [
+      "quote approval followup",
+      "quote approval",
+      "approval followup",
+      "quote",
+      "approval",
+      "followup"
+    ],
+    "quote_builder_sync_issue": [
+      "quote builder sync issue",
+      "quote builder sync",
+      "quote builder",
+      "builder sync",
+      "quote",
+      "builder"
+    ],
+    "quote_template_problem": [
+      "quote template problem",
+      "quote template",
+      "quote",
+      "template"
+    ],
+    "receipt_followup": [
+      "receipt followup",
+      "receipt",
+      "followup"
+    ],
+    "receipt_match_issue": [
+      "receipt match issue",
+      "receipt match",
+      "receipt",
+      "match"
+    ],
+    "reception_service_request": [
+      "reception service request",
+      "reception"
+    ],
+    "regional_audit_evidence_request": [
+      "regional audit evidence request",
+      "regional audit evidence",
+      "regional audit",
+      "audit evidence",
+      "regional",
+      "audit"
+    ],
+    "regional_move_coordination": [
+      "regional move coordination",
+      "regional move",
+      "move coordination",
+      "regional",
+      "move",
+      "coordination"
+    ],
+    "regional_seating_change": [
+      "regional seating change",
+      "regional seating",
+      "seating change",
+      "regional",
+      "seating",
+      "change"
+    ],
+    "release_window_question": [
+      "release window question",
+      "release window",
+      "release",
+      "window"
+    ],
+    "remote_work_policy_question": [
+      "remote work policy question",
+      "remote work policy",
+      "remote work",
+      "work policy",
+      "remote",
+      "work"
+    ],
+    "repo_access_request": [
+      "repo access request",
+      "repo access",
+      "repo",
+      "access"
+    ],
+    "residency_tax_question": [
+      "residency tax question",
+      "residency tax",
+      "residency",
+      "tax"
+    ],
+    "retro_pay_adjustment_request": [
+      "retro pay adjustment request",
+      "retro pay adjustment",
+      "retro pay",
+      "pay adjustment",
+      "retro",
+      "pay"
+    ],
+    "rollback_support_request": [
+      "rollback support request",
+      "rollback"
+    ],
+    "row_level_access_issue": [
+      "row level access issue",
+      "row level access",
+      "row level",
+      "level access",
+      "row",
+      "level"
+    ],
+    "scheduled_report_missing": [
+      "scheduled report missing",
+      "scheduled report",
+      "report missing",
+      "scheduled",
+      "report",
+      "missing"
+    ],
+    "service_account_access": [
+      "service account access",
+      "account access",
+      "account",
+      "access"
+    ],
+    "signage_update_request": [
+      "signage update request",
+      "signage update",
+      "signage",
+      "update"
+    ],
+    "site_readiness_check": [
+      "site readiness check",
+      "site readiness",
+      "readiness check",
+      "site",
+      "readiness",
+      "check"
+    ],
+    "software_installation": [
+      "software installation",
+      "software",
+      "installation"
+    ],
+    "source_of_truth_conflict": [
+      "source of truth conflict",
+      "source of truth",
+      "of truth conflict",
+      "source of",
+      "of truth",
+      "truth conflict"
+    ],
+    "stale_dataset_alert": [
+      "stale dataset alert",
+      "stale dataset",
+      "dataset alert",
+      "stale",
+      "dataset",
+      "alert"
+    ],
+    "status_page_update_request": [
+      "status page update request",
+      "status page update",
+      "status page",
+      "page update",
+      "status",
+      "page"
+    ],
+    "suppression_list_issue": [
+      "suppression list issue",
+      "suppression list",
+      "suppression",
+      "list"
+    ],
+    "swag_vendor_followup": [
+      "swag vendor followup",
+      "swag vendor",
+      "vendor followup",
+      "swag",
+      "vendor",
+      "followup"
+    ],
+    "tax_document_delivery_issue": [
+      "tax document delivery issue",
+      "tax document delivery",
+      "tax document",
+      "document delivery",
+      "tax",
+      "document"
+    ],
+    "tax_withholding_change": [
+      "tax withholding change",
+      "tax withholding",
+      "withholding change",
+      "tax",
+      "withholding",
+      "change"
+    ],
+    "territory_rule_mismatch": [
+      "territory rule mismatch",
+      "territory rule",
+      "rule mismatch",
+      "territory",
+      "rule",
+      "mismatch"
+    ],
+    "territory_update_request": [
+      "territory update request",
+      "territory update",
+      "territory",
+      "update"
+    ],
+    "timesheet_correction": [
+      "timesheet correction",
+      "timesheet",
+      "correction"
+    ],
+    "title_change": [
+      "title change",
+      "title",
+      "change"
+    ],
+    "tracking_gap_report": [
+      "tracking gap report",
+      "tracking gap",
+      "gap report",
+      "tracking",
+      "gap",
+      "report"
+    ],
+    "travel_expense_followup": [
+      "travel expense followup",
+      "travel expense",
+      "expense followup",
+      "travel",
+      "expense",
+      "followup"
+    ],
+    "travel_policy_exception": [
+      "travel policy exception",
+      "travel policy",
+      "policy exception",
+      "travel",
+      "policy",
+      "exception"
+    ],
+    "traveler_profile_sync_issue": [
+      "traveler profile sync issue",
+      "traveler profile sync",
+      "traveler profile",
+      "profile sync",
+      "traveler",
+      "profile"
+    ],
+    "traveler_profile_update": [
+      "traveler profile update",
+      "traveler profile",
+      "profile update",
+      "traveler",
+      "profile",
+      "update"
+    ],
+    "trigger_automation_issue": [
+      "trigger automation issue",
+      "trigger automation",
+      "trigger",
+      "automation"
+    ],
+    "trip_approval_delay": [
+      "trip approval delay",
+      "trip approval",
+      "approval delay",
+      "trip",
+      "approval",
+      "delay"
+    ],
+    "trip_booking_change": [
+      "trip booking change",
+      "trip booking",
+      "booking change",
+      "trip",
+      "booking",
+      "change"
+    ],
+    "unused_ticket_credit_question": [
+      "unused ticket credit question",
+      "unused ticket credit",
+      "unused ticket",
+      "ticket credit",
+      "unused",
+      "ticket"
+    ],
+    "vendor_document_missing": [
+      "vendor document missing",
+      "vendor document",
+      "document missing",
+      "vendor",
+      "document",
+      "missing"
+    ],
+    "vendor_update": [
+      "vendor update",
+      "vendor",
+      "update"
+    ],
+    "visa_letter_request": [
+      "visa letter request",
+      "visa letter",
+      "visa",
+      "letter"
+    ],
+    "visitor_hosting_request": [
+      "visitor hosting request",
+      "visitor hosting",
+      "visitor",
+      "hosting"
+    ],
+    "visitor_list_sync_issue": [
+      "visitor list sync issue",
+      "visitor list sync",
+      "visitor list",
+      "list sync",
+      "visitor",
+      "list"
+    ],
+    "w2_correction_request": [
+      "W-2 correction request",
+      "W-2 correction",
+      "W-2",
+      "correction"
+    ],
+    "warehouse_role_access": [
+      "warehouse role access",
+      "warehouse role",
+      "role access",
+      "warehouse",
+      "role",
+      "access"
+    ],
+    "webinar_setup_issue": [
+      "webinar setup issue",
+      "webinar setup",
+      "webinar",
+      "setup"
+    ]
+  },
+  "TOKEN_ALIASES": {
+    "ac": [
+      "ac",
+      "air conditioning"
+    ],
+    "access": [
+      "access",
+      "permission",
+      "permissions",
+      "right",
+      "rights",
+      "entitlement",
+      "entitlements",
+      "privilege",
+      "privileges"
+    ],
+    "admin": [
+      "admin",
+      "administrator",
+      "elevated",
+      "privileged"
+    ],
+    "badge": [
+      "badge",
+      "access card"
+    ],
+    "clause": [
+      "clause",
+      "language",
+      "wording",
+      "term"
+    ],
+    "cleaning": [
+      "cleaning",
+      "clean",
+      "dirty",
+      "spill",
+      "trash"
+    ],
+    "compromise": [
+      "compromise",
+      "compromised",
+      "hacked",
+      "taken over",
+      "unauthorized"
+    ],
+    "contract": [
+      "contract",
+      "agreement",
+      "paperwork"
+    ],
+    "credential": [
+      "credential",
+      "credentials",
+      "password",
+      "login",
+      "sign in"
+    ],
+    "data": [
+      "data",
+      "information",
+      "records"
+    ],
+    "deletion": [
+      "deletion",
+      "delete",
+      "remove",
+      "erase"
+    ],
+    "desk": [
+      "desk",
+      "seat",
+      "workstation",
+      "cube",
+      "cubicle"
+    ],
+    "drive": [
+      "drive",
+      "folder",
+      "directory"
+    ],
+    "equipment": [
+      "equipment",
+      "hardware",
+      "device",
+      "devices",
+      "tablet",
+      "tablets",
+      "laptop",
+      "laptops",
+      "monitor",
+      "monitors"
+    ],
+    "ergonomic": [
+      "ergonomic",
+      "chair",
+      "keyboard tray",
+      "monitor arm",
+      "wrist support"
+    ],
+    "exposure": [
+      "exposure",
+      "leak",
+      "disclosed",
+      "visible to others",
+      "shared publicly"
+    ],
+    "lighting": [
+      "lighting",
+      "lights",
+      "light",
+      "lamp",
+      "lamps",
+      "bulb",
+      "bulbs",
+      "flickering"
+    ],
+    "locked": [
+      "locked",
+      "locked out",
+      "lockout"
+    ],
+    "maintenance": [
+      "maintenance",
+      "facilities",
+      "building",
+      "repair"
+    ],
+    "malware": [
+      "malware",
+      "virus",
+      "trojan",
+      "infected",
+      "infection"
+    ],
+    "meeting": [
+      "meeting",
+      "conference",
+      "call"
+    ],
+    "mfa": [
+      "mfa",
+      "multi factor",
+      "two factor",
+      "2fa"
+    ],
+    "msa": [
+      "msa",
+      "master service"
+    ],
+    "nda": [
+      "nda",
+      "non disclosure"
+    ],
+    "okta": [
+      "okta",
+      "sign in"
+    ],
+    "password": [
+      "password",
+      "credential",
+      "credentials"
+    ],
+    "po": [
+      "po",
+      "purchase order"
+    ],
+    "privacy": [
+      "privacy",
+      "personal data",
+      "personal information"
+    ],
+    "process": [
+      "process",
+      "procedure",
+      "workflow"
+    ],
+    "purchase": [
+      "purchase",
+      "purchasing",
+      "procurement",
+      "order",
+      "ordered",
+      "buy",
+      "buying",
+      "acquire",
+      "acquisition"
+    ],
+    "retention": [
+      "retention",
+      "retained",
+      "keep",
+      "kept"
+    ],
+    "room": [
+      "room",
+      "conference room",
+      "meeting room"
+    ],
+    "shared": [
+      "shared",
+      "team",
+      "common"
+    ],
+    "suspicious": [
+      "suspicious",
+      "unusual",
+      "unexpected",
+      "strange",
+      "weird"
+    ],
+    "temporary": [
+      "temporary",
+      "temporarily",
+      "short term",
+      "short-term",
+      "limited time",
+      "for today",
+      "just for today",
+      "for a few hours"
+    ],
+    "vendor": [
+      "vendor",
+      "supplier",
+      "seller",
+      "provider",
+      "partner"
+    ],
+    "violation": [
+      "violation",
+      "against policy",
+      "policy breach",
+      "not allowed"
+    ],
+    "visitor": [
+      "visitor",
+      "guest",
+      "external visitor"
+    ],
+    "vpn": [
+      "vpn",
+      "remote access",
+      "remote network",
+      "remote network login",
+      "remote login",
+      "remote connection",
+      "work remotely",
+      "connect remotely",
+      "connection wont establish",
+      "connection will not establish"
+    ],
+    "workspace": [
+      "workspace",
+      "workstation",
+      "desk",
+      "seat",
+      "office area"
+    ],
+    "av": [
+      "av",
+      "a/v",
+      "audio visual",
+      "audio-visual"
+    ],
+    "bi": [
+      "bi",
+      "business intelligence"
+    ],
+    "ci": [
+      "ci",
+      "continuous integration",
+      "build pipeline"
+    ],
+    "crm": [
+      "crm",
+      "salesforce"
+    ],
+    "w2": [
+      "w2",
+      "w-2",
+      "tax form"
+    ]
+  }
+}

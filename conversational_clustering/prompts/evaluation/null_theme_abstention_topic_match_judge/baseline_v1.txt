@@ -1,0 +1,14 @@
+You are matching the initial clustering theme requested by a human user to a configured inventory of unsupported themes.
+
+Human-provided guidance:
+{requested_guidance}
+
+Configured unsupported themes:
+{unsupported_topics}
+
+Return a structured judgment using these rules:
+- Match using only the human-provided guidance and the configured unsupported themes.
+- `matched_unsupported_topic_id` should be the configured topic_id for the unsupported theme that best matches the initial requested theme.
+- If the initial requested theme does not clearly match any configured unsupported theme, set `matched_unsupported_topic_id` to null.
+- Do not judge whether the assistant rejected the theme; a separate judge handles that.
+- Keep reasoning brief.

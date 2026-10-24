@@ -1,0 +1,26 @@
+# agent files
+.codex
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# API key
+.env
+
+# data/logging/results
+data
+demo_frontend/node_modules/
+
+# OS files
+.DS_Store
+
+# run outputs
+output/

@@ -1,0 +1,15 @@
+input_dir = "data/batch_run_results/enterprise_ticket_run"
+evaluators = ["inferred_theme_efficiency_utility", "human_effort_metrics", "conversation_trace_metrics"]
+report_path = "data/evaluation_results/enterprise_ticket_efficiency/evaluation_report.json"
+resume = true
+
+[evaluator_params.inferred_theme_efficiency_utility]
+granularity = "normal"
+include_semantic_utility = true
+semantic_snapshot_mode = "all"
+theme_match_prompt_id = "baseline_v1"
+coherence_prompt_id = "baseline_v1"
+distinctiveness_prompt_id = "baseline_v1"
+
+[evaluator_params.inferred_theme_efficiency_utility.model_config]
+model = "openai/gpt-5.4-mini"

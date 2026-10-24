@@ -1,0 +1,14 @@
+You are evaluating how well an inferred clustering guidance matches the actual guidance.
+
+Actual Guidance:
+{actual_guidance}
+
+Inferred Guidance:
+{inferred_guidance}
+
+On a scale of 0-10, how semantically similar are these two guidances? Consider:
+- Do they capture the same clustering principle?
+- Are the key concepts aligned?
+- Would they produce similar clusterings?
+
+Provide a similarity score between 0 and 10 (you can use decimals like 7.5) and a brief reasoning for your score.

@@ -1,0 +1,7 @@
+input_dir = "data/batch_run_results/enterprise_ticket_run"
+evaluators = ["robustness_expectations"]
+pairwise_scope = "inter"
+report_path = "data/evaluation_results/enterprise_ticket_robustness/evaluation_report.json"
+
+[evaluator_params.robustness_expectations]
+similarity_metric = "adjusted_rand_index"

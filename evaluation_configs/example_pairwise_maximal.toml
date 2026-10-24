@@ -1,0 +1,12 @@
+input_dir = "data/batch_run_results/example_maximal"
+evaluators = ["pairwise_consistency", "robustness_expectations"]
+pairwise_scope = "sweep_inter"
+report_path = "data/evaluation_results/example_pairwise_maximal/evaluation_report.json"
+resume = true
+
+[evaluator_params.pairwise_consistency]
+
+[evaluator_params.robustness_expectations]
+similarity_metric = "adjusted_rand_index"
+invariance_threshold = 0.8
+responsiveness_threshold = 0.4

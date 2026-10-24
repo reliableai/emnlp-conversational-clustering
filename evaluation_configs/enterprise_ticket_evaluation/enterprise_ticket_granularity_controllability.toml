@@ -1,0 +1,8 @@
+input_dir = "data/batch_run_results/enterprise_ticket_controllability_refine"
+evaluators = ["controllability"]
+report_path = "data/evaluation_results/enterprise_ticket_controllability/evaluation_report.json"
+resume = true
+
+[evaluator_params.controllability]
+alpha = 0.8
+beta = 0.1

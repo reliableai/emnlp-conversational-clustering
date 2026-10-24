@@ -1,0 +1,25 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        entry: uv run --group dev ruff check --fix
+        language: system
+        types_or: [python, pyi]
+      - id: ruff-format
+        name: ruff-format
+        entry: uv run --group dev ruff format
+        language: system
+        types_or: [python, pyi]
+      - id: ty
+        name: ty
+        entry: uv run --group dev ty check .
+        language: system
+        pass_filenames: false
+        types_or: [python, pyi]
+      - id: frontend-typecheck
+        name: frontend-typecheck
+        entry: node demo_frontend/node_modules/typescript/bin/tsc -b demo_frontend/tsconfig.json --pretty false
+        language: system
+        pass_filenames: false
+        files: ^demo_frontend/(src/.*\.(ts|tsx)|package\.json|tsconfig(?:\.node)?\.json|vite\.config\.ts)$

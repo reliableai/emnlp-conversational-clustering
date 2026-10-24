@@ -1,0 +1,79 @@
+output_dir = "data/batch_run_results/example_maximal"
+num_runners = 1
+reporter = "batch_progress"
+
+[base]
+name = "maximal_synthetic_run"
+dataset_name = "synthetic"
+clustering_agent_backend = "backend_v1"
+human_verifier_prompt_id = "baseline_v1"
+max_verification_retries = 2
+enable_embeddings = false
+enable_intermittent_clustering = false
+embedding_force_recompute = false
+embedding_batch_size = 64
+limit = 100
+max_turns = 8
+num_runs = 1
+random_seed = 42
+
+[base.clustering_agent_backend_config]
+prompt_id = "baseline_v1"
+
+[base.clustering_agent_backend_config.intermittent_clustering_judge_model]
+model = "openai/gpt-5.4"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[base.clustering_agent_backend_config.model_config]
+model = "openai/gpt-5.2"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.2
+
+[base.human_agent_model_config]
+model = "x-ai/grok-4"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.7
+
+[base.human_verifier_model_config]
+model = "google/gemini-3.1-pro-preview"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = true
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[base.embedding_model_config]
+model = "openai/text-embedding-3-small"
+backend = "openrouter"
+device = "auto"
+base_url = "https://openrouter.ai/api/v1"
+provider_order = []
+allow_fallbacks = false
+api_key_env = "OPENROUTER_API_KEY"
+# dimensions = 1024
+# input_type = "document"
+
+[base.metadata]
+
+[sweep]
+vary_by = "human_agent_config"
+values = [
+  { prompt_id = "baseline_v4", persona = "task_oriented", topic_discovery = { enabled = false }, turn_injection = { turn_index = 3, edit_primitive = "theme_switch", source_theme_id = "vehicle", target_theme_id = "fruit" } },
+  { prompt_id = "baseline_v4", persona = "task_oriented", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "task_oriented", topic_discovery = { enabled = true, trigger_mode = "human_tool", max_rounds = 3, min_new_topics_per_round = 2 } }
+]
+
+# [branch]
+# shared_turns = 3
+# vary_by = "max_verification_retries"
+# values = [1, 4]

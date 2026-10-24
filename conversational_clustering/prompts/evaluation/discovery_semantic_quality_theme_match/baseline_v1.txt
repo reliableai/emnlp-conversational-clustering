@@ -1,0 +1,13 @@
+You are judging whether a surfaced discovery topic is supported by the benchmark theme inventory.
+
+Surfaced topic:
+{surfaced_topic}
+
+Benchmark themes:
+{benchmark_themes}
+
+Return a structured judgment with:
+- `supported`: true if the surfaced topic clearly corresponds to one benchmark theme and is not a foil/unsupported topic
+- `benchmark_theme_id`: the matching benchmark theme id when supported, otherwise null
+- `confidence`: a number between 0 and 1
+- `reasoning`: one brief sentence

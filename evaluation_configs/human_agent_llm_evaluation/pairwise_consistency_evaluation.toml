@@ -1,0 +1,6 @@
+input_dir = "data/batch_run_results/human_agent_consistency"
+pairwise_scope = "intra"
+
+evaluators = ["pairwise_consistency"]
+
+[evaluator_params]

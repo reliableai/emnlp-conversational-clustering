@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conversational-clustering"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.11.*"
+dependencies = [
+    "dotenv==0.9.*",
+    "fastapi==0.116.*",
+    "langchain-core==1.2.*",
+    "langchain-openrouter==0.0.*",
+    "langgraph==1.0.9",
+    "langgraph-prebuilt==1.0.8",
+    "numpy==2.3.*",
+    "openrouter==0.7.*",
+    "pandas==3.0.*",
+    "pyarrow==22.0.*",
+    "scikit-learn==1.8.*",
+    "pydantic==2.12.*",
+    "python-dotenv==1.2.*",
+    "sentence-transformers==5.2.*",
+    "torch==2.10.*",
+    "uvicorn==0.35.*",
+]
+
+[project.scripts]
+generate-structured-dataset = "dataset_generation.cli:run_structured_dataset_cli"
+generate-enterprise-ticket-dataset = "dataset_generation.cli:run_enterprise_ticket_dataset_cli"
+run-demo-api = "demo_api.cli:run_demo_api_cli"
+
+[dependency-groups]
+dev = [
+    "pre-commit==4.5.*",
+    "pytest==9.0.*",
+    "ruff==0.15.*",
+    "ty==0.0.18",
+]
+
+[tool.setuptools.packages.find]
+include = ["conversational_clustering*", "dataset_generation*", "demo_api*"]
+
+[tool.setuptools.package-data]
+conversational_clustering = [
+    "prompts/*/*.json",
+    "prompts/*/*/*.json",
+    "prompts/*/*.txt",
+    "prompts/*/*/*.txt",
+]
+dataset_generation = [
+    "presets/enterprise_ticket/resources/*.json",
+    "presets/enterprise_ticket/resources/*.txt",
+    "presets/restaurant_review/resources/*.json",
+    "presets/restaurant_review/resources/*.txt",
+    "presets/social_media/resources/*.json",
+    "presets/social_media/resources/*.txt",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

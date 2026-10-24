@@ -1,0 +1,302 @@
+[
+  {
+    "id": "task_oriented",
+    "name": "Task-Oriented",
+    "user_profile": "Wants to complete a specific task quickly with minimal back-and-forth.",
+    "conversation_style": "Direct and structured, with short sentences and explicit requirements.",
+    "example_prompts": [
+      "Cluster these conversations by topic and return 8 cluster names.",
+      "Group chats by intent (bug report, question, request, complaint).",
+      "Explain how to evaluate clustering quality without labels."
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Narrow",
+    "response_length": "Short; 1-3 concise sentences."
+  },
+  {
+    "id": "casual_social",
+    "name": "Casual-Social",
+    "user_profile": "Treats the system like a helpful friend and keeps the interaction light.",
+    "conversation_style": "Informal, slangy, and emoji-friendly, with occasional abbreviations.",
+    "example_prompts": [
+      "Can you like group these chats? \ud83d\ude05",
+      "can u group the ones that are basically the same vibe?",
+      "Which chats are about the same thing?"
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Short; 1-2 informal sentences."
+  },
+  {
+    "id": "uncertain_explorer",
+    "name": "Uncertain-Explorer",
+    "user_profile": "Doesn't know the right terms and explores by asking tentative questions.",
+    "conversation_style": "Tentative, question-heavy, and vague about goals.",
+    "example_prompts": [
+      "What would you do if you had to organize these somehow?",
+      "I don't really know what clustering is, can you still group these?",
+      "Can you find patterns in these dialogues?"
+    ],
+    "clarity": "Low",
+    "intent_stability": "Shifting",
+    "topic_specificity": "Broad",
+    "response_length": "Medium; 2-5 exploratory sentences."
+  },
+  {
+    "id": "domain_expert",
+    "name": "Domain-Expert",
+    "user_profile": "Technical user focused on system behavior, evaluation, and edge cases.",
+    "conversation_style": "Precise and jargon-heavy, assuming shared context.",
+    "example_prompts": [
+      "Compare HDBSCAN vs agglomerative for dialogue embeddings.",
+      "How would you mitigate embedding drift in incremental clustering?",
+      "What's the best intrinsic metric for cluster coherence?"
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Narrow",
+    "response_length": "Medium; 2-6 dense technical sentences."
+  },
+  {
+    "id": "frustrated",
+    "name": "Frustrated",
+    "user_profile": "Annoyed by poor results and wants fixes immediately.",
+    "conversation_style": "Impatient, blunt, and emotional, with strong negative language.",
+    "example_prompts": [
+      "Why is everything going into one cluster?",
+      "This makes no sense, fix the grouping.",
+      "Why can't it tell these conversations are different?"
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Shifting",
+    "topic_specificity": "Narrow",
+    "response_length": "Short; 1-3 sharp sentences."
+  },
+  {
+    "id": "polite",
+    "name": "Polite",
+    "user_profile": "Courteous user who writes like a friendly support ticket.",
+    "conversation_style": "Polite and complete, with clear constraints and frequent thanks.",
+    "example_prompts": [
+      "Could you please group these chats by issue category?",
+      "I'd appreciate a summary of the main themes.",
+      "Can you identify which cluster each conversation belongs to?"
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Medium; 3-6 polite sentences."
+  },
+  {
+    "id": "minimalist",
+    "name": "Minimalist",
+    "user_profile": "Provides very little context and expects the system to infer the rest.",
+    "conversation_style": "One-liners and short phrases, often without punctuation.",
+    "example_prompts": [
+      "Group these.",
+      "organize pls",
+      "Find themes."
+    ],
+    "clarity": "Low",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Very short; 1-5 words."
+  },
+  {
+    "id": "multi_intent",
+    "name": "Multi-Intent",
+    "user_profile": "Asks for several things at once instead of one clean request.",
+    "conversation_style": "Long, clause-heavy instructions that mix tasks together.",
+    "example_prompts": [
+      "Cluster these chats, name the clusters, and summarize each.",
+      "Group by topic and also flag urgent ones.",
+      "Find duplicates and draft responses for the top 3 clusters."
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Long; multi-part instructions."
+  },
+  {
+    "id": "noisy",
+    "name": "Noisy",
+    "user_profile": "Types quickly and sloppily, with little editing.",
+    "conversation_style": "Typos, shorthand, fragments, and inconsistent capitalization.",
+    "example_prompts": [
+      "it mix evrything :/ fix",
+      "need clustring but idk how",
+      "how do i make it not do that"
+    ],
+    "clarity": "Low",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Short; fragments or 3-12 words."
+  },
+  {
+    "id": "tester",
+    "name": "Tester",
+    "user_profile": "Purposely tries odd inputs and edge cases to break the system.",
+    "conversation_style": "Provocative and weird, with ambiguous or stress-test requests.",
+    "example_prompts": [
+      "Cluster: banana politics quantum pizza.",
+      "Group conversations that contradict each other.",
+      "Make 2 clusters from 100 unrelated topics."
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Shifting",
+    "topic_specificity": "Broad",
+    "response_length": "Medium; 2-6 odd or adversarial sentences."
+  },
+  {
+    "id": "preference_based",
+    "name": "Preference-Based",
+    "user_profile": "Wants grouping based on subjective preferences rather than topic alone.",
+    "conversation_style": "Uses feelings and values like stressful, helpful, annoying, or fun.",
+    "example_prompts": [
+      "Which conversations feel tense or negative?",
+      "Cluster conversations by tone: friendly, tense, neutral.",
+      "Put the supportive ones together and the stressful ones elsewhere."
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Medium; 2-5 subjective sentences."
+  },
+  {
+    "id": "privacy_conscious",
+    "name": "Privacy-Conscious",
+    "user_profile": "Worried about sensitive data and asks for anonymization or careful handling.",
+    "conversation_style": "Cautious and constraint-heavy, with explicit privacy concerns.",
+    "example_prompts": [
+      "Cluster these after removing names and emails.",
+      "Don't store any data-just return cluster IDs.",
+      "Can you anonymize and then group the conversations?"
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Narrow",
+    "response_length": "Medium; 3-7 constraint-heavy sentences."
+  },
+  {
+    "id": "impatient_executive",
+    "name": "Impatient-Executive",
+    "user_profile": "Senior stakeholder who wants outcomes quickly and dislikes extra detail.",
+    "conversation_style": "Directive and outcome-focused, with little patience for complexity.",
+    "example_prompts": [
+      "Top themes and counts. Keep it high level.",
+      "Show me what customers complain about most.",
+      "Summarize clusters in one slide worth of bullets."
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Short; 1-3 directive sentences."
+  },
+  {
+    "id": "researcher",
+    "name": "Researcher",
+    "user_profile": "Designs benchmarks and cares about reproducibility, controls, and metrics.",
+    "conversation_style": "Methodical, structured, and focused on evaluation design.",
+    "example_prompts": [
+      "Propose an evaluation protocol for conversational clustering.",
+      "How do we measure cluster stability across random seeds and time windows?",
+      "Compare intrinsic vs extrinsic clustering metrics."
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Narrow",
+    "response_length": "Long; structured reasoning over several sentences."
+  },
+  {
+    "id": "curious",
+    "name": "Curious",
+    "user_profile": "Wants to understand the concepts and tradeoffs, not just get an answer.",
+    "conversation_style": "Why-heavy and example-seeking, with frequent follow-up questions.",
+    "example_prompts": [
+      "Can you explain how you cluster in simple terms?",
+      "Why would two chats be considered similar?",
+      "Can you walk me through a tiny example step by step?"
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Shifting",
+    "topic_specificity": "Broad",
+    "response_length": "Medium; 3-8 question-heavy sentences."
+  },
+  {
+    "id": "debater",
+    "name": "Debater",
+    "user_profile": "Challenges answers and pushes back on assumptions.",
+    "conversation_style": "Confrontational, rhetorical, and justification-seeking.",
+    "example_prompts": [
+      "Why is that a valid cluster boundary?",
+      "Your labels seem arbitrary, prove that they're coherent.",
+      "You're assuming the intent is the same, but it isn't."
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Shifting",
+    "topic_specificity": "Narrow",
+    "response_length": "Medium; 3-7 argumentative sentences."
+  },
+  {
+    "id": "constraint_heavy",
+    "name": "Constraint-Heavy",
+    "user_profile": "Defines strict rules, schemas, and output requirements.",
+    "conversation_style": "Bullet-like, explicit, and validation-oriented.",
+    "example_prompts": [
+      "Return clusters as JSON with id, label, rationale, examples.",
+      "Use exactly 7 clusters, max label length 20 chars.",
+      "Put anything ambiguous into 'other'."
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Narrow",
+    "response_length": "Long; spec-like requests with constraints."
+  },
+  {
+    "id": "cross_lingual",
+    "name": "Cross-Lingual",
+    "user_profile": "Mixes languages and may switch mid-sentence.",
+    "conversation_style": "Code-switching with occasional untranslated phrases.",
+    "example_prompts": [
+      "Can you agrupar these chats por tema?",
+      "Organize these conversations, pero por intención.",
+      "Cluster these mensajes and label them in English."
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Stable",
+    "topic_specificity": "Broad",
+    "response_length": "Medium; 2-6 mixed-language sentences."
+  },
+  {
+    "id": "sarcastic_complainant",
+    "name": "Sarcastic-Complainant",
+    "user_profile": "Shows dissatisfaction through sarcasm instead of direct anger.",
+    "conversation_style": "Dry, passive-aggressive, and snarky.",
+    "example_prompts": [
+      "Yeah, these totally belong together... not.",
+      "Can you magically make sense of this mess?",
+      "Put the 'helpful' chats together, if any exist."
+    ],
+    "clarity": "Medium",
+    "intent_stability": "Shifting",
+    "topic_specificity": "Broad",
+    "response_length": "Short; 1-4 snarky sentences."
+  },
+  {
+    "id": "data_annotator",
+    "name": "Data-Annotator",
+    "user_profile": "Thinks in labels and wants a stable taxonomy that can be reused.",
+    "conversation_style": "Systematic, label-driven, and focused on definitions and examples.",
+    "example_prompts": [
+      "Define a taxonomy of intents for these chats.",
+      "Create cluster labels and guidelines for assigning new chats.",
+      "Show borderline examples and how you'd resolve them."
+    ],
+    "clarity": "High",
+    "intent_stability": "Stable",
+    "topic_specificity": "Narrow",
+    "response_length": "Long; guideline-oriented detail."
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "theme_switch": "Ask the assistant to reorganize the dataset around a different clustering theme.",
+  "coarsen": "Ask the assistant to regroup the dataset into broader, higher-level clusters while preserving the current clustering theme.",
+  "refine": "Ask the assistant to regroup the dataset into more specific, fine-grained clusters while preserving the current clustering theme."
+}

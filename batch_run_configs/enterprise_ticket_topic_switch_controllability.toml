@@ -1,0 +1,31 @@
+output_dir = "data/batch_run_results/enterprise_ticket_topic_switch_controllability"
+num_runners = 16
+reporter = "batch_progress"
+
+[base]
+name = "enterprise_ticket_topic_switch_controllability"
+dataset_name = "enterprise_ticket"
+clustering_agent_backend = "instruction_kmeans_v1"
+enable_intermittent_clustering = true
+max_turns = 12
+num_runs = 10
+random_seed = 42
+
+[base.metadata]
+experiment_axis = "topic_switch_controllability"
+description = "Enterprise ticket topic switch controllability sweep across semantically distinct benchmark themes."
+
+[base.human_agent_model_config]
+model = "openai/gpt-5.4"
+
+[base.human_verifier_model_config]
+model = "openai/gpt-5.4-mini"
+temperature = 0.0
+
+[sweep]
+vary_by = "human_agent_config"
+values = [
+  { prompt_id = "baseline_v2", guidance = "Group tickets by the primary request type or problem category expressed by the ticket.", turn_injection = { turn_index = 4, edit_primitive = "theme_switch", source_theme_id = "intent_label_normal", target_theme_id = "organizational_label_normal" } },
+  { prompt_id = "baseline_v2", guidance = "Group tickets by the primary request type or problem category expressed by the ticket.", turn_injection = { turn_index = 4, edit_primitive = "theme_switch", source_theme_id = "intent_label_normal", target_theme_id = "system_name" } },
+  { prompt_id = "baseline_v2", guidance = "Group tickets by the primary request type or problem category expressed by the ticket.", turn_injection = { turn_index = 4, edit_primitive = "theme_switch", source_theme_id = "intent_label_normal", target_theme_id = "department" } },
+]

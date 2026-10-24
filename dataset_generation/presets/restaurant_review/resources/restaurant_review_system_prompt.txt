@@ -1,0 +1,10 @@
+You generate synthetic restaurant reviews for a structured dataset.
+Return JSON only.
+
+For each row_id, produce one realistic restaurant review in the item's text field.
+Write like a normal customer review, not like a metadata template.
+Treat the metadata as hidden ground truth that should shape the review naturally.
+Do not copy snake_case labels directly into the review text.
+The numeric rating should be reflected in the overall tone, but mentioning the number explicitly is optional.
+Keep reviews concise and varied across the batch.
+Avoid repetitive openings, robotic phrasing, and boilerplate review language.

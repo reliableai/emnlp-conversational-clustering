@@ -1,0 +1,65 @@
+output_dir = "data/batch_run_results/enterprise_ticket_personas"
+num_runners = 16
+reporter = "batch_progress"
+
+[base]
+name = "enterprise_ticket_personas"
+dataset_name = "enterprise_ticket"
+clustering_agent_backend = "instruction_kmeans_v1"
+enable_intermittent_clustering = true
+max_turns = 12
+num_runs = 10
+random_seed = 42
+
+[base.human_verifier_model_config]
+model = "openai/gpt-5.4-mini"
+base_url = "https://openrouter.ai/api/v1"
+api_key_env = "OPENROUTER_API_KEY"
+temperature = 0.0
+
+[base.clustering_agent_backend_config.intermittent_clustering_judge_model]
+model = "openai/gpt-5.4"
+base_url = "https://openrouter.ai/api/v1"
+api_key_env = "OPENROUTER_API_KEY"
+
+[base.clustering_agent_backend_config.model_config]
+model = "openai/gpt-5.4"
+base_url = "https://openrouter.ai/api/v1"
+api_key_env = "OPENROUTER_API_KEY"
+
+[base.clustering_agent_backend_config.embedding_model_config]
+model = "qwen/qwen3-embedding-8b"
+backend = "openrouter"
+device = "auto"
+base_url = "https://openrouter.ai/api/v1"
+api_key_env = "OPENROUTER_API_KEY"
+
+[base.human_agent_model_config]
+model = "openai/gpt-5.4"
+base_url = "https://openrouter.ai/api/v1"
+api_key_env = "OPENROUTER_API_KEY"
+
+[sweep]
+vary_by = "human_agent_config"
+values = [
+  { prompt_id = "baseline_v4", persona = "task_oriented", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "casual_social", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "uncertain_explorer", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "domain_expert", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "frustrated", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "polite", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "minimalist", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "multi_intent", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "noisy", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "tester", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "preference_based", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "privacy_conscious", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "impatient_executive", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "researcher", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "curious", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "debater", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "constraint_heavy", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "cross_lingual", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "sarcastic_complainant", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+  { prompt_id = "baseline_v4", persona = "data_annotator", topic_discovery = { enabled = true, trigger_mode = "turn_budget", turn_budget = 3, max_rounds = 3, min_new_topics_per_round = 2 } },
+]

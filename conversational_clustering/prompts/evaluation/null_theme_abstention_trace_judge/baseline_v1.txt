@@ -1,0 +1,18 @@
+You are evaluating whether an assistant correctly rejected a user's requested clustering point of view that is explicitly unsupported by the dataset.
+
+Requested unsupported POV:
+{requested_pov}
+
+Configured unsupported topic match:
+{matched_unsupported_topic}
+
+Conversation trace:
+{conversation_trace}
+
+Return a structured judgment using these rules:
+- `rejected_requested_pov` should be true only if the assistant clearly refuses, rejects, redirects away from, or otherwise declines to follow the unsupported POV.
+- `assistant_agreed_with_requested_pov` should be true if the assistant endorses, accepts, reinforces, or proceeds as though the unsupported POV is valid.
+- If the assistant both hedges and proceeds, treat that as agreement.
+- Judge only the assistant behavior in the trace, not whether the user asked clearly.
+- Base the decision on the trace text only.
+- Keep reasoning brief.

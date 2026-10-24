@@ -1,0 +1,32 @@
+output_dir = "data/batch_run_results/enterprise_ticket_null_theme_abstention"
+num_runners = 16
+reporter = "batch_progress"
+
+[base]
+name = "enterprise_ticket_null_theme_abstention"
+dataset_name = "enterprise_ticket"
+clustering_agent_backend = "instruction_kmeans_v1"
+enable_intermittent_clustering = true
+max_turns = 6
+num_runs = 10
+random_seed = 42
+
+[base.metadata]
+experiment_axis = "null_theme_abstention"
+description = "Enterprise ticket null-theme abstention sweep requesting explicitly unsupported clustering points of view."
+
+[base.human_agent_model_config]
+model = "openai/gpt-5.4"
+
+[base.human_verifier_model_config]
+model = "openai/gpt-5.4-mini"
+temperature = 0.0
+
+[sweep]
+vary_by = "human_agent_config"
+values = [
+  { prompt_id = "baseline_v2", guidance = "Group tickets by requester astrology sign." },
+  { prompt_id = "baseline_v2", guidance = "Group tickets by requester personality type." },
+  { prompt_id = "baseline_v2", guidance = "Group tickets by requester mood." },
+  { prompt_id = "baseline_v2", guidance = "Group tickets by requester seniority." },
+]

@@ -1,0 +1,11 @@
+input_dir = "data/batch_run_results/enterprise_ticket_run"
+evaluators = ["clustering_pov_semantic_quality"]
+report_path = "data/evaluation_results/enterprise_ticket_clustering_pov_discovery_quality/evaluation_report.json"
+resume = true
+
+[evaluator_params.clustering_pov_semantic_quality]
+theme_match_prompt_id = "baseline_v1"
+duplicate_prompt_id = "baseline_v1"
+
+[evaluator_params.clustering_pov_semantic_quality.model_config]
+model = "openai/gpt-5.4-mini"

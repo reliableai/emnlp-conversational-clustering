@@ -1,0 +1,6 @@
+output_dir = "data/batch_run_results/example_minimal"
+num_runners = 1
+
+[base]
+name = "minimal_synthetic_run"
+dataset_name = "synthetic"

@@ -1,0 +1,8 @@
+You are given a clustering of items. Your task is to infer the original guidance or criteria that was used to create these clusters.
+
+Clustering:
+{clustering}
+
+Based on the items in each cluster, what guidance or criteria do you think was used to organize them? Provide a concise description of the clustering principle.
+
+Inferred Guidance:

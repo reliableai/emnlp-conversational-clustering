@@ -1,0 +1,5 @@
+input_dir = "data/batch_run_results/human_agent_consistency"
+
+evaluators = ["conversation_trace_metrics"]
+
+[evaluator_params]

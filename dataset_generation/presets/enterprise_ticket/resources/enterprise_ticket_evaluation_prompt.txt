@@ -1,0 +1,9 @@
+Evaluate each dataset row for label-to-text quality alignment.
+You are checking if text naturally matches its metadata labels.
+The most important fields are issue_type and sub_intent.
+Ratings:
+  pass: text clearly matches metadata and sounds like a realistic requester message.
+  need_attention: mostly plausible but vague, partially misaligned, or quality-risky.
+  not_pass: contradictory, clearly wrong label alignment, or unusable text quality.
+Evaluate each row independently and return one item per row_id.
+Return valid JSON only, matching this schema exactly:

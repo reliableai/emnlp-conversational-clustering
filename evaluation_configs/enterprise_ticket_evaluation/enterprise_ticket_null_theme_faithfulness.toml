@@ -1,0 +1,18 @@
+input_dir = "data/batch_run_results/enterprise_ticket_null_theme_abstention"
+evaluators = ["null_theme_abstention"]
+report_path = "data/evaluation_results/enterprise_ticket_null_theme_abstention/evaluation_report.json"
+resume = true
+
+[evaluator_params.null_theme_abstention]
+match_judge_prompt_id = "baseline_v1"
+trace_judge_prompt_id = "baseline_v1"
+unsupported_topics = [
+  { topic_id = "requester_astrology", label = "Requester Astrology", guidance = "Group tickets by requester astrology sign." },
+  { topic_id = "requester_personality_type", label = "Requester Personality Type", guidance = "Group tickets by requester personality type." },
+  { topic_id = "requester_mood", label = "Requester Mood", guidance = "Group tickets by requester mood." },
+  { topic_id = "requester_seniority", label = "Requester Seniority", guidance = "Group tickets by requester seniority." },
+]
+
+[evaluator_params.null_theme_abstention.model_config]
+model = "openai/gpt-5.4-mini"
+temperature = 0.0

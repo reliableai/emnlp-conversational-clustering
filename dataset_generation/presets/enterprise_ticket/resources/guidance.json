@@ -1,0 +1,214 @@
+{
+  "APPROVAL_GUIDANCE": {
+    "none": [
+      "do not imply any formal approval step is blocking this"
+    ],
+    "finance_approval": [
+      "the requester may mention budget codes, reimbursement, PO, purchasing, or payment details without naming a formal step",
+      "the requester may ask whether any spend or billing information is still missing"
+    ],
+    "manager_approval": [
+      "the requester may mention they already checked with their manager or are unsure who still needs to reply",
+      "the requester may sound like they do not understand why this has not moved forward through reviews yet"
+    ],
+    "multi_step_approval": [
+      "the requester may feel like this keeps stalling or bouncing around between handoffs",
+      "the requester may hint that multiple checks seem involved without naming internal approver chains"
+    ],
+    "security_approval": [
+      "the requester may mention extra access restrictions or checks without sounding like they know the internal process",
+      "the requester may say role or group access still is not available even after the usual request steps"
+    ]
+  },
+  "COMPLETENESS_GUIDANCE": {
+    "complete": "include enough detail for the issue to feel concrete",
+    "minimal": "make it noticeably vague or incomplete",
+    "partial": "leave out one concrete detail a resolver would likely ask for, such as date, amount, ID, or system context"
+  },
+  "DEPENDENCY_GUIDANCE": {
+    "none": [
+      "the requester expects this should be a fairly straightforward fix or answer"
+    ],
+    "waiting_for_another_team": [
+      "the requester may say one part was already handled elsewhere but the problem is still unresolved",
+      "the requester may describe being redirected before without calling out internal ownership"
+    ],
+    "waiting_for_document": [
+      "the requester may mention they already uploaded something or ask what information is still missing",
+      "the requester may refer to a form, receipt, contract, or tax document without spelling out the full process"
+    ],
+    "waiting_for_manager": [
+      "the requester may say they already followed up internally and still do not know what else is needed",
+      "the requester may hint that someone on their side might still need to respond"
+    ],
+    "waiting_for_system_sync": [
+      "the requester may describe that something was changed already but the tool still shows the old state or membership",
+      "the requester may point out that the update does not seem to have taken effect yet"
+    ],
+    "waiting_for_vendor": [
+      "the requester may say outside information is still missing or incomplete",
+      "the requester may mention waiting on details from an external contact"
+    ]
+  },
+  "DEPENDENCY_GUIDANCE_PROBABILITY": {
+    "none": 0.1,
+    "waiting_for_another_team": 0.3,
+    "waiting_for_document": 0.42,
+    "waiting_for_manager": 0.38,
+    "waiting_for_system_sync": 0.3,
+    "waiting_for_vendor": 0.38
+  },
+  "EMOTION_GUIDANCE": {
+    "apologetic": "sound a little apologetic or hesitant",
+    "confused": "let the tone reflect uncertainty and mild confusion",
+    "frustrated": "sound frustrated but still normal and believable for workplace ticket language",
+    "neutral": "keep the tone practical and matter-of-fact",
+    "passive": "keep the tone flat and low-energy",
+    "slightly_annoyed": "sound mildly irritated, not dramatic",
+    "urgent": "sound pressed for time because work is blocked"
+  },
+  "IMPACT_GUIDANCE": {
+    "company_wide": [
+      "if it comes up at all, make it sound broader than one area without using scope labels",
+      "the requester may imply this seems to be happening in multiple places without quantifying it"
+    ],
+    "multi_department": [
+      "the requester may hint that people outside their immediate group are also affected",
+      "the requester may suggest the problem seems broader than just one team"
+    ],
+    "single_department": [
+      "the requester may hint that several coworkers in the same department, site, or office area are affected"
+    ],
+    "single_team": [
+      "the requester may hint that teammates nearby are running into the same thing"
+    ],
+    "single_user": [
+      "keep the focus mostly on the requester's own work"
+    ]
+  },
+  "IMPACT_GUIDANCE_PROBABILITY": {
+    "company_wide": 0.3,
+    "multi_department": 0.34,
+    "single_department": 0.26,
+    "single_team": 0.2,
+    "single_user": 0.06
+  },
+  "INTENT_GUIDANCE": {
+    "ask_question": "make the requester mainly ask whether this is expected or how it works",
+    "ask_status": "make the requester mainly ask for a status update",
+    "confirm_action": "make the requester confirm what they already did and ask what is next",
+    "escalate": "make the requester push for quicker attention in normal business language",
+    "report_issue_only": "make the requester mostly report the problem without proposing a fix",
+    "request_fix": "make the requester mainly want help fixing or unlocking it"
+  },
+  "INTERACTION_DIRECTIVE_MAP": {
+    "asked_for_more_info": "following_up",
+    "following_up": "following_up",
+    "none": "no_prior_interaction",
+    "redirected_here": "told_to_submit_ticket",
+    "self_tried": "already_tried_something",
+    "still_not_fixed": "still_not_fixed"
+  },
+  "INTERACTION_GUIDANCE": {
+    "asked_for_more_info": "write like the requester is replying with extra details",
+    "following_up": "write like the requester is following up",
+    "no_prior_interaction": "write like this is the first time the requester is reaching out about it",
+    "redirected_here": "hint that another team or channel redirected them to submit this here",
+    "self_tried": "mention one thing they already tried",
+    "still_not_fixed": "make it clear the issue is still not fixed"
+  },
+  "KNOWLEDGE_GUIDANCE": {
+    "confused": "sound unsure about what is actually wrong",
+    "correct_understanding": "sound like the requester mostly understands the problem",
+    "guessing": "let the requester hedge and guess about the cause",
+    "misdiagnosing": "let the requester confidently guess the wrong cause, such as permissions vs sync delay",
+    "unsure_if_correct_channel": "hint that the requester may not be in the right queue"
+  },
+  "SEVERITY_GUIDANCE": {
+    "business_critical": [
+      "make the consequences feel urgent and operationally important without using executive jargon",
+      "show that this is creating a serious work problem without sounding like an outage report"
+    ],
+    "major": [
+      "show that an important task is blocked or delayed until this is resolved",
+      "make the consequences feel materially disruptive without sounding dramatic"
+    ],
+    "minor": [
+      "keep the consequences practical and fairly limited"
+    ],
+    "moderate": [
+      "make it clear this is disruptive enough to interrupt normal work",
+      "show that this is more than a small annoyance but still grounded in day-to-day work"
+    ]
+  },
+  "SEVERITY_GUIDANCE_PROBABILITY": {
+    "business_critical": 0.44,
+    "major": 0.36,
+    "minor": 0.12,
+    "moderate": 0.22
+  },
+  "SEVERITY_RANKS": {
+    "business_critical": 3,
+    "major": 2,
+    "minor": 0,
+    "moderate": 1
+  },
+  "STRUCTURE_GUIDANCE": {
+    "context_first": "start with background before the actual issue",
+    "follow_up": "write like this is a follow-up to prior attempts, not a brand-new request",
+    "fragmented": "keep it clipped, incomplete, or a little messy",
+    "narrative": "describe it as a short sequence of what changed, what failed, and what is now blocked",
+    "request_first": "open with the ask, then give a little context",
+    "symptom_first": "open with the symptom before the explanation or ask"
+  },
+  "TEMPORAL_DIRECTIVE_MAP": {
+    "after_change_or_update": "after_change",
+    "again_today": "again_today",
+    "first_occurrence": "first_occurrence",
+    "recurring_issue": "recurring",
+    "since_recent_time": "since_this_morning"
+  },
+  "TEMPORAL_GUIDANCE": {
+    "after_change_or_update": "connect it to a recent change, setup, update, or policy/process shift",
+    "again_today": "make it feel like it is happening again today",
+    "first_occurrence": "if time comes up, make it feel like the first time they noticed it",
+    "recurring_issue": "make it feel recurring rather than brand new",
+    "since_recent_time": "anchor it to a recent time like this morning"
+  },
+  "URGENCY_RANKS": {
+    "critical": 3,
+    "high": 2,
+    "low": 0,
+    "medium": 1
+  },
+  "WORKFLOW_GUIDANCE": {
+    "blocked": [
+      "the requester may sound stuck because their work cannot move forward",
+      "the requester may emphasize that they are unable to continue until this changes"
+    ],
+    "escalated": [
+      "the requester may sound sharper or more urgent after earlier attempts did not fix it",
+      "the requester may write like this has dragged on long enough and now needs quick attention"
+    ],
+    "in_progress": [
+      "the requester may mention that some part of this seems underway but it still is not usable",
+      "the requester may ask for completion or an update because the issue is not fully resolved yet"
+    ],
+    "new_submission": [
+      "write this like the requester is opening the issue for the first time",
+      "make it sound like a straightforward initial request rather than a case summary"
+    ],
+    "pending_approval": [
+      "the requester may be confused about why this has stalled or what is still needed",
+      "the requester may hint that they already did their part but do not know what is holding this up"
+    ],
+    "pending_requester_info": [
+      "the requester may be filling in details they forgot or were asked for earlier",
+      "the requester may add one or two clarifying details after earlier back-and-forth, such as date, screenshot, or reference number"
+    ],
+    "triaged": [
+      "the requester may assume this already reached the right place and is asking for movement",
+      "the requester may sound like they expected the owning team to pick this up already"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+You are judging whether two surfaced discovery topics are semantically redundant.
+
+Left topic:
+{left_topic}
+
+Right topic:
+{right_topic}
+
+Return a structured judgment with:
+- `duplicate`: true if the two topics describe the same underlying discovery theme
+- `confidence`: a number between 0 and 1
+- `reasoning`: one brief sentence

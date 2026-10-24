@@ -1,0 +1,229 @@
+{
+  "POST_ACT_GUIDANCE": {
+    "inform_share_news": "share an update or development in a specific, non-boilerplate way",
+    "express_opinion": "take a stance and make the reasoning feel personal or concrete",
+    "ask_question": "ask a clear question with realistic context",
+    "promote_advertise": "promote something naturally without sounding like ad copy pasted from a brochure",
+    "entertain_joke": "aim for natural social humor rather than a forced punchline",
+    "vent_rant": "sound frustrated about a concrete pain point rather than vaguely mad",
+    "mobilize_call_to_action": "include a practical action people could actually take",
+    "debate_argue": "sound like a real argument in public conversation, not an essay thesis",
+    "narrate_personal_experience": "anchor the post in a lived moment or consequence"
+  },
+  "STANCE_GUIDANCE": {
+    "supportive": "the post should land as backing or defending something",
+    "critical": "the post should land as disagreement or criticism with a specific reason",
+    "neutral": "the post should mostly observe, describe, or ask without strong side-taking",
+    "mixed": "include some tension or nuance rather than a single clean polarity",
+    "promotional": "the post should clearly sell, invite, or boost attention"
+  },
+  "SENTIMENT_GUIDANCE": {
+    "very_negative": "show strong dissatisfaction with concrete stakes",
+    "negative": "sound clearly unfavorable without cartoonish exaggeration",
+    "neutral": "keep emotional loading low",
+    "mixed": "acknowledge both upside and downside",
+    "positive": "sound favorable with grounded detail",
+    "very_positive": "sound strongly enthusiastic and specific"
+  },
+  "TONE_GUIDANCE": {
+    "neutral": "matter-of-fact and unembellished",
+    "optimistic": "constructive and forward-looking",
+    "skeptical": "questioning and evidence-seeking",
+    "frustrated": "tired and specific about the pain point",
+    "angry": "intense without becoming cartoonish",
+    "hopeful": "concerned but not cynical",
+    "sarcastic": "ironic in a natural social tone",
+    "urgent": "time-sensitive with practical stakes",
+    "informative": "clear and concrete",
+    "reflective": "self-aware and personal"
+  },
+  "AUDIENCE_GUIDANCE": {
+    "general_public": "write for anyone casually scrolling",
+    "niche_community": "sound legible to people already inside the niche",
+    "friends_followers": "sound like it came from someone's ordinary feed",
+    "customers": "sound like a brand or seller addressing current or potential buyers",
+    "political_group": "sound like it is aimed at people already politically engaged",
+    "industry_peers": "sound like peers in the same profession or business space will read it",
+    "fans_fandom": "sound like other fans will understand the references",
+    "self_directed": "it can read like a note to self or a thought dump"
+  },
+  "FORMALITY_GUIDANCE": {
+    "very_formal": "use polished, restrained wording",
+    "informational_neutral": "clear, direct, and not flashy",
+    "casual_conversational": "sound like normal social posting",
+    "slang_heavy": "allow colloquial internet phrasing if it still sounds natural",
+    "meme_style": "allow playful internet shorthand without turning into nonsense",
+    "professional_pr_tone": "sound like a professional update or announcement",
+    "academic_explanatory": "sound explanatory and structured"
+  },
+  "CERTAINTY_GUIDANCE": {
+    "speculative": "use hedging and possibility language",
+    "uncertain": "acknowledge missing information",
+    "mixed_certainty": "be confident about one part and uncertain about another",
+    "confident": "state the point clearly without overclaiming",
+    "very_confident": "sound firm and explicit",
+    "data_backed": "reference numbers, reports, trends, or evidence naturally",
+    "none": "do not call attention to confidence level"
+  },
+  "MODALITY_GUIDANCE": {
+    "pure_text": "no link or media markers",
+    "text_plus_link": "append one plausible link token",
+    "text_plus_image": "include '[image attached]' exactly once",
+    "text_plus_video": "include '[video attached]' exactly once",
+    "poll": "make it read like a quick poll or vote prompt",
+    "thread_starter": "end with a natural thread continuation cue",
+    "reply": "sound like a direct response to another post",
+    "quote_post": "sound like commentary on something someone else posted"
+  },
+  "TEMPORAL_GUIDANCE": {
+    "past_reflection": "frame it as looking back",
+    "present_commentary": "frame it as current commentary",
+    "near_future_prediction": "look ahead in the short term",
+    "long_term_prediction": "look ahead with a bigger horizon",
+    "timeless_general_statement": "make it read as a broad observation",
+    "real_time_reaction": "make it feel immediate and in-the-moment"
+  },
+  "OPENING_STYLE_GUIDANCE": {
+    "direct": "open with the concrete event or claim",
+    "observation": "open with what is being noticed",
+    "question_open": "open with a natural question",
+    "status_update": "open as an update",
+    "anecdote_open": "open with a small lived detail",
+    "context_first": "open with framing before the main point"
+  },
+  "SENTENCE_STYLE_GUIDANCE": {
+    "single": "one rich sentence",
+    "two_clause": "two clauses with a clear contrast or turn",
+    "short_plus_followup": "short lead sentence followed by one clarifying sentence",
+    "narrative": "let the thought unfold in sequence",
+    "contrast": "use a before-and-after or claim-and-counterpoint pattern"
+  },
+  "INFORMATION_DENSITY_GUIDANCE": {
+    "very_low": "keep it sparse and breezy",
+    "low": "light on detail",
+    "medium": "include a healthy amount of context",
+    "high": "pack in multiple concrete details",
+    "very_high": "fit in dense, compressed detail without sounding robotic",
+    "data_heavy": "include numbers or evidence naturally",
+    "link_heavy": "make the link feel like the payload"
+  },
+  "COGNITIVE_FRAMING_GUIDANCE": {
+    "emotional_reaction": "let feeling drive the framing",
+    "personal_anecdote": "anchor the point in a specific lived moment",
+    "logical_argument": "frame the post as an argument with reasons",
+    "moral_framing": "frame the point as what is right, fair, or responsible",
+    "statistical_data_driven": "lean on evidence, counts, or reports",
+    "hypothetical_scenario": "use a what-if framing",
+    "rhetorical_question": "use a rhetorical question naturally",
+    "analogy_metaphor": "allow one apt comparison if it sounds human"
+  },
+  "ENGAGEMENT_GUIDANCE": {
+    "none": "avoid a direct engagement hook",
+    "question_prompt": "invite people to answer or weigh in",
+    "controversial_statement": "use a bold take that invites response",
+    "emotional_appeal": "make the hook emotional rather than purely informative",
+    "informational_hook": "lead with a detail people will want to know",
+    "clickbait_style": "use a mildly clicky framing without becoming spammy",
+    "hashtag_driven": "let one hashtag feel central if natural",
+    "direct_call_to_respond": "explicitly ask people to reply or share"
+  },
+  "LENGTH_STYLE_GUIDANCE": {
+    "very_short": "keep it compact",
+    "short": "brief and scroll-friendly",
+    "medium": "a normal single-post length",
+    "long": "long enough to unpack the point but still one post",
+    "threadish": "a dense opener that feels like it could lead into more"
+  },
+  "EMOJI_USAGE_GUIDANCE": {
+    "none": "do not use emoji",
+    "light": "at most one natural emoji",
+    "moderate": "one or two emoji if they genuinely fit",
+    "expressive": "allow a more expressive emoji choice if the platform/style fits"
+  },
+  "HASHTAG_USAGE_GUIDANCE": {
+    "none": "do not use hashtags",
+    "light": "at most one hashtag if it fits naturally",
+    "campaign": "include one purposeful campaign or topic hashtag",
+    "fandom": "allow one fandom or event-style hashtag"
+  },
+  "ENTITY_REFERENCE_GUIDANCE": {
+    "generic_reference": "it is fine to reference people, products, or institutions generically",
+    "named_org_or_product": "a named company, product, or app can appear naturally",
+    "named_public_figure": "a named public figure can appear naturally",
+    "named_local_institution": "a named local institution can appear naturally"
+  },
+  "REPLY_CONTEXT_GUIDANCE": {
+    "none": "write as a standalone post",
+    "direct_reply": "make it clearly sound like a response",
+    "agree_then_add": "start from agreement and add something",
+    "pushback_reply": "sound like respectful pushback",
+    "quote_and_reframe": "sound like reacting to someone else's framing"
+  },
+  "SARCASM_GUIDANCE": {
+    "none_literal": "keep it literal",
+    "mild_irony": "allow a light ironic edge",
+    "clear_sarcasm": "make the sarcasm obvious but natural",
+    "heavy_sarcasm": "lean into sarcasm without turning into gibberish",
+    "satirical": "let it feel lightly satirical",
+    "ambiguous": "keep the irony a little ambiguous"
+  },
+  "HUMOR_GUIDANCE": {
+    "no_humor": "do not force humor",
+    "dry_subtle": "keep humor understated",
+    "sarcastic_humor": "let the joke come through sarcasm",
+    "absurd_surreal": "allow a slightly absurd comparison or image",
+    "meme_based": "allow meme-like phrasing if it still reads naturally",
+    "self_deprecating": "make the speaker the butt of the joke",
+    "observational": "use everyday observation as the joke",
+    "dark_humor": "keep it dark only if it still sounds plausibly social"
+  },
+  "IDENTITY_SIGNALING_GUIDANCE": {
+    "none": "do not foreground group identity",
+    "subtle_affiliation": "hint at affiliation without overdoing it",
+    "cultural_identity_signaling": "allow cultural markers if natural",
+    "political_identity_signaling": "allow political in-group cues if natural",
+    "professional_identity": "signal a work or industry identity",
+    "fandom_identity": "signal fandom identity",
+    "strong_in_group_signaling": "make the in-group cue obvious"
+  },
+  "IDEOLOGY_GUIDANCE": {
+    "none": "do not make ideology explicit",
+    "strongly_progressive": "let the framing read distinctly progressive",
+    "moderate_progressive": "let the framing lean progressive",
+    "centrist": "keep the framing explicitly moderate or balanced",
+    "moderate_conservative": "let the framing lean conservative",
+    "strongly_conservative": "let the framing read distinctly conservative",
+    "libertarian": "let the framing emphasize individual liberty and small-state instincts",
+    "apolitical_unclear": "keep ideology unclear even if the topic is political"
+  },
+  "CODE_SWITCHING_GUIDANCE": {
+    "none": "stay in one language/register",
+    "light_internet_slang": "allow a little online shorthand",
+    "mixed_english_spanish": "allow light English-Spanish mixing if natural",
+    "regional_informal": "allow regionally flavored informal phrasing"
+  },
+  "VIRALITY_GUIDANCE": {
+    "low_personal_note": "keep it personal and not optimized for spread",
+    "moderate": "give it some broader relevance",
+    "high_relatable": "make it sharply relatable",
+    "very_high_controversial": "make it likely to spark disagreement",
+    "meme_optimized": "make it meme-ready without sounding templated",
+    "news_amplification": "make it easy to reshare as a news reaction",
+    "influencer_amplification": "make it feel tuned for broad public engagement"
+  },
+  "REPETITION_AVOIDANCE_GUIDANCE": [
+    "Avoid repeating opening scaffolds across rows.",
+    "Do not reuse the same first four-word sequence.",
+    "Vary sentence rhythm and punctuation patterns.",
+    "Rotate between direct, anecdotal, analytical, and rhetorical framing.",
+    "Avoid cloning one template and swapping nouns only.",
+    "Use different lexical choices for similar label combinations.",
+    "Some posts should include hashtags or links, but not all."
+  ],
+  "BANNED_TEMPLATE_SCAFFOLDS": [
+    "my take is",
+    "quick update",
+    "this is wild",
+    "real talk"
+  ]
+}

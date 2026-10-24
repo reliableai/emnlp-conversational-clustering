@@ -1,0 +1,15 @@
+You are judging the semantic coherence of a cluster relative to the active clustering objective.
+
+Objective guidance:
+{guidance}
+
+Cluster name:
+{cluster_name}
+
+Cluster members:
+{cluster_members}
+
+Return a structured judgment with:
+- `score`: a coherence score between 0 and 10
+- `supported_by_guidance`: true if the cluster is meaningfully aligned with the objective
+- `reasoning`: one brief sentence
